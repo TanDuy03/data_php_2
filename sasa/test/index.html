@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="animate.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.2.1/dist/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+</head>
+
+<body>
+    <ul>
+        <li class="animate__animated animate__bounce">1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+        <li>8</li>
+    </ul>
+    <input type="text">
+    <h1 class="text">
+        Nguyễn Tấn Duy
+    </h1>
+
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam, autem cupiditate omnis, nisi voluptates saepe
+        ex neque facilis recusandae earum veniam iusto suscipit atque quo. Voluptate quis alias esse provident? column
+        rule Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci in assumenda illum ut laudantium animi
+        fugit quam, ipsum molestiae exercitationem sapiente consectetur ratione veniam! Dicta, vitae enim. Quasi,
+        veritatis pariatur.</p>
+
+    <div class="container">
+        <div class="card">1</div>
+        <div class="card">2</div>
+        <div class="card">3</div>
+        <div class="card">4</div>
+        <div class="card">5</div>
+    </div>
+
+    <!-- Lazy load -->
+    <div class="con-image">
+        <div class="list">
+            <img src="https://cdn.pixabay.com/photo/2023/04/28/14/35/dog-7956828_960_720.jpg" alt=""
+                data-src="https://cdn.pixabay.com/photo/2023/04/28/14/35/dog-7956828_960_720.jpg">
+            <img src="https://cdn.pixabay.com/photo/2023/04/18/20/21/flowers-7935942_960_720.jpg" alt=""
+                data-src="https://cdn.pixabay.com/photo/2023/04/18/20/21/flowers-7935942_960_720.jpg">
+            <img src="https://cdn.pixabay.com/photo/2023/04/24/10/37/car-7947765_960_720.jpg" alt=""
+                data-src="https://cdn.pixabay.com/photo/2023/04/24/10/37/car-7947765_960_720.jpg">
+            <img src="https://cdn.pixabay.com/photo/2023/04/21/15/42/portrait-7942151_960_720.jpg" alt=""
+                data-src="https://cdn.pixabay.com/photo/2023/04/21/15/42/portrait-7942151_960_720.jpg">
+            <img src="https://cdn.pixabay.com/photo/2023/04/04/00/51/sunset-7898136_960_720.jpg" alt=""
+                data-src="https://cdn.pixabay.com/photo/2023/04/04/00/51/sunset-7898136_960_720.jpg">
+            <img src="https://cdn.pixabay.com/photo/2023/04/28/05/43/lemur-7955891_960_720.jpg" alt=""
+                data-src="https://cdn.pixabay.com/photo/2023/04/28/05/43/lemur-7955891_960_720.jpg">
+        </div>
+    </div>
+    <!-- js lazy load  -->
+    <script>
+        window.addEventListener("DOMContentLoaded", () => {
+            const images = document.querySelectorAll('.list img');
+            images.forEach(image => {
+                new IntersectionObserver((entries, observe) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            const img = entry.target
+                            const dataSrc = img.getAttribute('data-src')
+                            img.setAttribute('src', dataSrc)
+                            img.removeAttribute('data-src')
+                            observe.disconnect()
+                        }
+                    })
+                }).observe(image)
+            })
+        })
+    </script>
+    <!-- card group -->
+    <div class="container-fluid my-5">
+        <div class="card-group">
+            <div class="card">
+                <div class="card-body">B</div>
+            </div>
+            <div class="card">
+                <div class="card-body">B</div>
+            </div>
+            <div class="card">
+                <div class="card-body">B</div>
+            </div>
+            <div class="card">
+                <div class="card-body">B</div>
+            </div>
+        </div>
+    </div>
+    <!-- animate css library-->
+    <h2 class="animate__animated animate__bounce">Tan Duy</h2>
+    <!--  -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.6/dist/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.2.1/dist/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

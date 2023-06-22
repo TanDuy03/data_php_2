@@ -1,0 +1,16 @@
+{
+    "name": "tanduy/autoload",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "Autoload\\": "./"
+        }
+    },
+    "authors": [
+        {
+            "name": "TanDuy",
+            "email": "tanduy@gmail.com"
+        }
+    ],
+    "require": {}
+}

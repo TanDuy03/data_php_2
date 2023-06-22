@@ -1,0 +1,4 @@
+RewriteEngine On
+RewriteRule ^([a-zA-Z1-9]+)$ index.php?url=$1
+RewriteRule ^([a-zA-Z1-9]+)/([a-zA-Z1-9]+)$ index.php?url=$1&id=$2
+DirectoryIndex  index.php

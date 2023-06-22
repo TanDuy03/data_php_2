@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="shortcut icon" href="img/duynt.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="test.css">
+</head>
+
+<body>
+    <label for="theme" class="theme">
+        <span class="theme__toggle-wrap">
+            <input id="theme" class="theme__toggle" type="checkbox" role="switch" name="theme" value="dark">
+            <span class="theme__fill"></span>
+            <span class="theme__icon">
+                <span class="theme__icon-part"></span>
+                <span class="theme__icon-part"></span>
+                <span class="theme__icon-part"></span>
+                <span class="theme__icon-part"></span>
+                <span class="theme__icon-part"></span>
+                <span class="theme__icon-part"></span>
+                <span class="theme__icon-part"></span>
+                <span class="theme__icon-part"></span>
+                <span class="theme__icon-part"></span>
+            </span>
+        </span>
+    </label>
+    <div class="container">
+        <span class="loader">Tan Duy</span>
+        <div class="content">
+            <img src="https://scontent.fdad3-5.fna.fbcdn.net/v/t1.6435-9/152042280_713202999560545_4858769703304001837_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=174925&_nc_ohc=OqkZSSBSRfIAX___0Gl&_nc_ht=scontent.fdad3-5.fna&oh=00_AfCPuta0yRUojiHpSKvKMn34w7XgKSmPLp30y1OL0zVCsw&oe=6479B078"
+                alt="">
+            <div class="list-btn">
+                <a href="https://www.facebook.com/ntanduy03" target="_blank" class="social">Facebook</a>
+                <a href="https://github.com/TanDuy03" target="_blank" class="social">Github</a>
+            </div>
+        </div>
+    </div>
+    <span class="loader2"></span>
+    <!--  -->
+    <script>
+        document.querySelector(".theme__toggle").addEventListener("click", () => {
+            document.body.classList.toggle("dark");
+        })
+    </script>
+</body>
+
+</html>

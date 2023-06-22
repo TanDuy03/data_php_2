@@ -1,0 +1,72 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#container{
+    width: 1200px;
+    margin: auto;
+}
+header{
+    background-color: skyblue;
+    height: 160px;
+    position: relative;
+}
+header #logo{
+    position: absolute;
+    width: 100px;
+    left: 50px;
+    top: 30px;
+}
+header #giohang{
+    position: absolute;
+    width: 100px;
+    right: 50px;
+    top: 30px;
+    font-size: 20px;
+    color: red;
+    text-align: center;
+}
+#container nav{
+    background-color: orange;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#container > nav > ul{
+    list-style: none;
+    display: flex;
+    font-size: 1.2em;
+}
+#container > nav > ul > li > a{
+    color: #fff;
+    text-decoration: none;
+    margin-right: 15px;
+    font-weight: bold;
+    transition: 0.5s;
+}
+#container > nav > ul > li > a:hover{
+    color: red;
+    text-decoration: underline;
+}
+#spnb h2, #doitac h2{
+    text-align: center;
+    padding: 20px;
+}
+main #data{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 20px;
+    grid-template-rows: 350px 350px;
+}
+main #data > .sp{
+    background-color: saddlebrown;
+}
+#doitac #data{
+    display: grid;
+    grid-template-columns: repeat(7, auto);
+    gap: 20px;
+    grid-template-rows: 120px;
+}

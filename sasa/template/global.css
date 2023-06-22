@@ -1,0 +1,21 @@
+body {
+    margin: 0;
+    line-height: normal;
+  }
+  
+  :root {
+    /* fonts */
+    --pj-regular-18: "Plus Jakarta Sans";
+  
+    /* font sizes */
+    --pj-regular-18-size: 18px;
+    --pj-bold-42-size: 42px;
+    --pj-regular-16-size: 16px;
+    --pj-bold-21-size: 21px;
+  
+    /* Colors */
+    --base-white: #fff;
+    --gray-600: #52525b;
+    --gray-900: #18181b;
+  }
+  

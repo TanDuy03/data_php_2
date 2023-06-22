@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animate</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.2.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="aos.css">
+    <style>
+        .row{
+            height: 800px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="row"></div>
+        <div class="row">
+            <div class="col-6 bg-danger" data-aos="fade-up-right" data-aos-duration="1000">1</div>
+            <div class="col-6 bg-primary" data-aos="fade-up-left" data-aos-duration="1000">2</div>
+        </div>
+        <div class="row">
+            <div class="col-6 bg-success" data-aos="fade-right" data-aos-duration="1000">3</div>
+            <div class="col-6 bg-dark" data-aos="fade-left" data-aos-duration="1000">4</div>
+        </div>
+        <div class="row">
+            <div class="col-6 bg-secondary" data-aos="fade-up" data-aos-duration="1000">5</div>
+            <div class="col-6 bg-info" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="1000">6</div>
+        </div>
+    </div>
+
+    <!--  -->
+    <script src="aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>

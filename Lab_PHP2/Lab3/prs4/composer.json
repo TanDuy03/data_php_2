@@ -1,0 +1,14 @@
+{
+    "name": "thuan/prs4",
+    "autoload": {
+        "psr-4": {
+            "app\\": "./"
+        }
+    },
+    "authors": [
+        {
+            "name": "thuan"
+        }
+    ],
+    "require": {}
+}
